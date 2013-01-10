@@ -1,0 +1,213 @@
+
+This driver should handle the following Ralink-chips (from the source code): 
+	RT2870, RT3070, RT3370, RT35xx, RT3573, RT5370, RT5572
+
+
+The driver knows the following Vendor-/Device-ID combinations (from the source code):
+
+Vendor | Manuf. |  Chip  | Remarks
+-------+--------+--------+-------------------------------------------------------
+0x148F | 0x2770 | RT2870 |  Ralink
+0x148F | 0x2870 | RT2870 |  Ralink
+0x07B8 | 0x2870 | RT2870 |  AboCom
+0x07B8 | 0x2770 | RT2870 |  AboCom
+0x0DF6 | 0x0039 | RT2870 |  Sitecom 2770
+0x0DF6 | 0x003F | RT2870 |  Sitecom 2770
+0x083A | 0x7512 | RT2870 |  Arcadyan 2770
+0x0789 | 0x0162 | RT2870 |  Logitec 2870
+0x0789 | 0x0163 | RT2870 |  Logitec 2870
+0x0789 | 0x0164 | RT2870 |  Logitec 2870
+0x177f | 0x0302 | RT2870 |  lsusb
+0x0B05 | 0x1731 | RT2870 |  Asus
+0x0B05 | 0x1732 | RT2870 |  Asus
+0x0B05 | 0x1742 | RT2870 |  Asus
+0x0DF6 | 0x0017 | RT2870 |  Sitecom
+0x0DF6 | 0x002B | RT2870 |  Sitecom
+0x0DF6 | 0x002C | RT2870 |  Sitecom
+0x0DF6 | 0x002D | RT2870 |  Sitecom
+0x14B2 | 0x3C06 | RT2870 |  Conceptronic
+0x14B2 | 0x3C28 | RT2870 |  Conceptronic
+0x2019 | 0xED06 | RT2870 |  Planex Communications Inc.
+0x07D1 | 0x3C09 | RT2870 |  D-Link
+0x07D1 | 0x3C11 | RT2870 |  D-Link
+0x14B2 | 0x3C07 | RT2870 |  AL
+0x050D | 0x8053 | RT2870 |  Belkin
+0x14B2 | 0x3C23 | RT2870 |  Airlink
+0x14B2 | 0x3C27 | RT2870 |  Airlink
+0x07AA | 0x002F | RT2870 |  Corega
+0x07AA | 0x003C | RT2870 |  Corega
+0x07AA | 0x003F | RT2870 |  Corega
+0x1044 | 0x800B | RT2870 |  Gigabyte
+0x15A9 | 0x0006 | RT2870 |  Sparklan
+0x083A | 0xB522 | RT2870 |  SMC
+0x083A | 0xA618 | RT2870 |  SMC
+0x083A | 0x8522 | RT2870 |  Arcadyan
+0x083A | 0x7522 | RT2870 |  Arcadyan
+0x0CDE | 0x0022 | RT2870 |  ZCOM
+0x0586 | 0x3416 | RT2870 |  Zyxel
+0x0CDE | 0x0025 | RT2870 |  Zyxel
+0x1740 | 0x9701 | RT2870 |  EnGenius
+0x1740 | 0x9702 | RT2870 |  EnGenius
+0x0471 | 0x200f | RT2870 |  Philips
+0x14B2 | 0x3C25 | RT2870 |  Draytek
+0x13D3 | 0x3247 | RT2870 |  AzureWave
+0x083A | 0x6618 | RT2870 |  Accton
+0x15c5 | 0x0008 | RT2870 |  Amit
+0x0E66 | 0x0001 | RT2870 |  Hawking
+0x0E66 | 0x0003 | RT2870 |  Hawking
+0x129B | 0x1828 | RT2870 |  Siemens
+0x157E | 0x300E | RT2870 |  U-Media
+0x050d | 0x805c | RT2870 | 
+0x050d | 0x815c | RT2870 | 
+0x1482 | 0x3C09 | RT2870 |  Abocom
+0x14B2 | 0x3C09 | RT2870 |  Alpha
+0x04E8 | 0x2018 | RT2870 |  samsung linkstick2
+0x1690 | 0x0740 | RT2870 |  Askey
+0x5A57 | 0x0280 | RT2870 |  Zinwell
+0x5A57 | 0x0282 | RT2870 |  Zinwell
+0x7392 | 0x7718 | RT2870 | 
+0x7392 | 0x7717 | RT2870 | 
+0x1737 | 0x0070 | RT2870 |  Linksys WUSB100
+0x1737 | 0x0071 | RT2870 |  Linksys WUSB600N
+0x0411 | 0x00e8 | RT2870 |  Buffalo WLI-UC-G300N
+0x050d | 0x815c | RT2870 |  Belkin F5D8053
+0x100D | 0x9031 | RT2870 |  Motorola 2770
+0x0DB0 | 0x6899 | RT2870 | 
+-------+--------+--------+-------------------------------------------------------
+0x148F | 0x3070 | RT3070 |  Ralink 3070
+0x148F | 0x3071 | RT3071 |  Ralink 3071
+0x148F | 0x3072 | RT3072 |  Ralink 3072
+0x0DB0 | 0x3820 | RT3070 |  Ralink 3070
+0x0DB0 | 0x871C | RT3070 |  Ralink 3070
+0x0DB0 | 0x822C | RT3070 |  Ralink 3070
+0x0DB0 | 0x871B | RT3070 |  Ralink 3070
+0x0DB0 | 0x822B | RT3070 |  Ralink 3070
+0x0DF6 | 0x003E | RT3070 |  Sitecom 3070
+0x0DF6 | 0x0042 | RT3072 |  Sitecom 3072
+0x0DF6 | 0x0048 | RT3070 |  Sitecom 3070
+0x0DF6 | 0x0047 | RT3071 |  Sitecom 3071
+0x0DF6 | 0x005F | RT3072 |  Sitecom 3072
+0x14B2 | 0x3C12 | RT3070 |  AL 3070
+0x18C5 | 0x0012 | RT3070 |  Corega 3070
+0x083A | 0x7511 | RT3070 |  Arcadyan 3070
+0x083A | 0xA701 | RT3070 |  SMC 3070
+0x083A | 0xA702 | RT3072 |  SMC 3072
+0x1740 | 0x9703 | RT3070 |  EnGenius 3070
+0x1740 | 0x9705 | RT3071 |  EnGenius 3071
+0x1740 | 0x9706 | RT3072 |  EnGenius 3072
+0x1740 | 0x9707 | RT3070 |  EnGenius 3070
+0x1740 | 0x9708 | RT3071 |  EnGenius 3071
+0x1740 | 0x9709 | RT3072 |  EnGenius 3072
+0x13D3 | 0x3273 | RT3070 |  AzureWave 3070
+0x13D3 | 0x3305 | RT3070 |  AzureWave 3070
+0x1044 | 0x800D | RT3070 |  Gigabyte GN-WB32L 3070
+0x2019 | 0xAB25 | RT3070 |  Planex Communications Inc. RT3070
+0x2019 | 0x5201 | RT3070 |  Planex Communications Inc. RT8070
+0x07B8 | 0x3070 | RT3070 |  AboCom 3070
+0x07B8 | 0x3071 | RT3071 |  AboCom 3071
+0x07B8 | 0x3072 | RT3072 |  Abocom 3072
+0x7392 | 0x7711 | RT3070 |  Edimax 3070
+0x7392 | 0x4085 | RT3070 |  2L Central Europe BV 8070
+0x1A32 | 0x0304 | RT3070 |  Quanta 3070
+0x1EDA | 0x2012 | RT3070 |  AirTies 3070
+0x1EDA | 0x2310 | RT3070 |  AirTies 3070
+0x07D1 | 0x3C0A | RT3072 |  D-Link 3072
+0x07D1 | 0x3C0D | RT3070 |  D-Link 3070
+0x07D1 | 0x3C0E | RT3070 |  D-Link 3070
+0x07D1 | 0x3C0F | RT3070 |  D-Link 3070
+0x07D1 | 0x3C16 | RT3070 |  D-Link 3070
+0x07D1 | 0x3C17 | RT3070 |  D-Link 8070
+0x1D4D | 0x000C | RT3070 |  Pegatron Corporation 3070
+0x1D4D | 0x000E | RT3070 |  Pegatron Corporation 3070
+0x1D4D | 0x0011 | RT3072 |  Pegatron Corporation 3072
+0x5A57 | 0x5257 | RT3070 |  Zinwell 3070
+0x5A57 | 0x0283 | RT3072 |  Zinwell 3072
+0x04BB | 0x0945 | RT3072 |  I-O DATA 3072
+0x04BB | 0x0947 | RT3070 |  I-O DATA 3070
+0x04BB | 0x0948 | RT3072 |  I-O DATA 3072
+0x203D | 0x1480 | RT3070 |  Encore 3070
+0x20B8 | 0x8888 | RT3070 |  PARA INDUSTRIAL 3070
+0x0B05 | 0x1784 | RT3072 |  Asus 3072
+0x203D | 0x14A9 | RT3070 |  Encore 3070*/
+0x0DB0 | 0x899A | RT3070 |  MSI 3070*/
+0x0DB0 | 0x3870 | RT3070 |  MSI 3070*/
+0x0DB0 | 0x870A | RT3070 |  MSI 3070*/
+0x0DB0 | 0x6899 | RT3070 |  MSI 3070
+0x0DB0 | 0x3822 | RT3070 |  MSI 3070
+0x0DB0 | 0x3871 | RT3070 |  MSI 3070
+0x0DB0 | 0x871A | RT3070 |  MSI 3070
+0x0DB0 | 0x822A | RT3070 |  MSI 3070
+0x0DB0 | 0x3821 | RT3070 |  Ralink 3070
+0x0DB0 | 0x821A | RT3070 |  Ralink 3070
+0x5A57 | 0x0282 | RT3072 |  zintech 3072
+0x083A | 0xA703 | RT3070 |  IO-MAGIC
+0x13D3 | 0x3307 | RT3070 |  Azurewave
+0x13D3 | 0x3321 | RT3070 |  Azurewave
+0x13D3 | 0x3329 | RT3070 |  Azurewave
+0x07FA | 0x7712 | RT3070 |  Edimax
+0x0789 | 0x0166 | RT3070 |  Edimax
+0x0586 | 0x341A | RT3070 |  Zyxel
+0x0586 | 0x341E | RT3070 |  Zyxel
+0x0586 | 0x343E | RT3070 |  Zyxel
+0x1EDA | 0x2012 | RT3070 |  Airties
+0x1EDA | 0x2210 | RT3070 |  Airties
+0x2001 | 0x3C1B | RT3070 |  Alpha
+0x083A | 0xB511 | RT3070 |  Panasonic
+-------+--------+--------+-------------------------------------------------------
+0x148F | 0x3370 | RT3370 |  Ralink 3370
+0x0DF6 | 0x0050 | RT3370 |  Sitecom 3370
+0x083A | 0xB511 | RT3370 |  Panasonic 3370
+0x0471 | 0x20DD | RT3370 |  Philips
+-------+--------+--------+-------------------------------------------------------
+0x148F | 0x3572 | RT3572 |  Ralink 3572
+0x1740 | 0x9801 | RT3572 |  EnGenius 3572
+0x0DF6 | 0x0041 | RT3572 |  Sitecom 3572
+0x0DF6 | 0x0042 | RT35xx | 
+0x04BB | 0x0944 | RT3572 |  I-O DATA 3572
+0x1690 | 0x0740 | RT35xx |  3572
+0x1690 | 0x0744 | RT35xx |  3572
+0x5A57 | 0x0284 | RT3572 |  Zinwell 3572
+0x167B | 0x4001 | RT35xx |  3572
+0x1690 | 0x0764 | RT35xx |  3572
+0x0930 | 0x0A07 | RT35xx |  TOSHIBA
+0x1690 | 0x0761 | RT35xx |  Askey
+0x13B1 | 0x002F | RT35xx |  Cisco LinkSys AE1000
+0x1737 | 0x0079 | RT35xx |  Cisco LinkSys WUSB600N
+0x0DF6 | 0x0065 | RT35xx |  Sitecom
+0x0DF6 | 0x0066 | RT35xx |  Sitecom
+0x0DF6 | 0x0068 | RT35xx |  Sitecom
+-------+--------+--------+-------------------------------------------------------
+0x148F | 0x3573 | RT3573 |  Ralink 3573
+0x7392 | 0x7733 | RT3573 |  Edimax
+0x0846 | 0x9012 | RT3573 |  Netgear WNDA4100 N900
+0x0DF6 | 0X0067 | RT3573 |  Sitecom
+0x1875 | 0x7733 | RT3573 |  Air Live
+0x0E66 | 0x0021 | RT3573 |  Hawking
+0x2019 | 0xED19 | RT3573 |  Planex
+-------+--------+--------+-------------------------------------------------------
+0x148F | 0x5370 | RT5370 |  Ralink 5370
+0x148F | 0x5372 | RT5372 |  Ralink 5372
+0x13D3 | 0x3365 | RT5370 |  Azurewave
+0x13D3 | 0x3329 | RT5370 |  Azurewave
+0x2001 | 0x3C15 | RT5370 |  Alpha
+0x2001 | 0x3C19 | RT5370 |  DWA-125/A3
+0x2001 | 0x3C1C | RT5370 |  GO-USB-N150
+0x2001 | 0x3C1D | RT5370 |  DWA-123/B1
+0x043E | 0x7A12 | RT5370 |  Arcadyan
+0x043E | 0x7A22 | RT5370 |  LG innotek
+0x043E | 0x7A32 | RT5370 |  Arcadyan
+0x043E | 0x7A42 | RT5370 |  LG innotek
+0x04DA | 0x1800 | RT5370 |  Panasonic
+0x04DA | 0x1801 | RT5370 |  Panasonic
+0x04DA | 0x23F6 | RT5370 | 
+0x0471 | 0x2104 | RT5372 |  Philips 5372
+0x0471 | 0x2180 | RT5370 |  Alpha
+0x0471 | 0x2181 | RT5370 |  Alpha
+0x0471 | 0x2182 | RT5370 |  Alpha
+0x0471 | 0x2126 | RT5370 |  Liteon
+-------+--------+--------+-------------------------------------------------------
+0x057C | 0x8501 | RT5572 |  AVM GmbH
+0x148F | 0x5572 | RT5572 |  Ralink 5572
+0x043E | 0x7A32 | RT5572 |  Arcadyan
+0x2001 | 0x3C1A | RT5572 |  D-Link DWA-160B2
+0x043E | 0x7A13 | RT5572 |  Proware

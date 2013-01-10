@@ -1,0 +1,23 @@
+How to install and use this driver?
+-----------------------------------
+
+- Copy the kernel module into the box' driver dir (/lib/modules/<kernel-version>/
+
+- Copy the necessary configuration file 'RT2870STA.dat' to the box. Note the 
+  directory is fixed by the driver. (/etc/Wireless/RT2870STA/)
+
+- Edit the configuration file 'RT2870STA.dat' in your box for you needs. Note
+  that not in all countries all frequencies are allowed to use, so at least check
+  the first tree entries 'CountryRegion' (for 2.4GHz networks), 
+  'CountryRegionABand' (for 5GHz networks), and 'CountryCode'. More details are
+  listed in the Readme.RT2870STA.dat file.
+
+- load the driver (insmod rt5572sta.ko). For automatic loading at boot time add
+  a proper line to the WLAN driver section. If multiple Ralink drivers are 
+  loaded, load this driver after the default Ralink drivers included in the
+  original firmware package. Note that the device names handled by this driver 
+  are named with 'ra<n>', where n is the number of the connected device, so the
+  first device bekomes ra0, the second one ra1 and so on.
+
+- setting up the device as any ther WLAN-device with WPA-supplicant (if needed)
+  and ifwconfig/ifconfig.
